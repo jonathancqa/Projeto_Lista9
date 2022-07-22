@@ -19,8 +19,10 @@ namespace Locadora
             filmes.Add(new Filmes("Sim Senhor", 14, 120, "Warner Bros. Pictures", "Ingles - Português", "2D", Categoria.COMEDIA));
             filmes.Add(new Filmes("O Homem Invisivel ", 16, 120, "Universal Pictures", "Ingles - Português", "3D", Categoria.SUSPENSE));
 
-            do {
-                Console.WriteLine("===== LOCADORA DOTNET GRUPO 4 =====");
+            do
+            {
+                Console.WriteLine("===== LOCADORA DOTNET GRUPO 4 =====" +
+                    "Bem Vindes !");
                 Console.WriteLine("1 - COMEDIA\n" +
                                   "2 - ROMANCE\n" +
                                   "3 - FICCAO\n" +
@@ -28,37 +30,26 @@ namespace Locadora
                                   "5 - SUSPENSE\n" +
                                   "0 - SAIR DA LOCADORA\n");
                 Console.Write("Digite a Categoria que você deseja: ");
-                int menu = int.Parse(Console.ReadLine());               
+                int menu = int.Parse(Console.ReadLine());
 
 
                 switch (menu)
                 {
                     case 1:
-
-                        int alugado = 0;
-                        
-                           
-                            Console.WriteLine("Filme Disponivel:");
-                            Console.WriteLine(filmes[3]);
-                            Console.WriteLine("Deseja alugar esse filme? \n" +
+                        Console.WriteLine("Filme Disponivel:");
+                        Console.WriteLine(filmes[3]);
+                        Console.WriteLine("Deseja alugar esse filme? \n" +
                                               "1 - Sim | 2 - Não");
-                            resp = int.Parse(Console.ReadLine());
-                            if (resp == 1)
-                            {
-                            if (alugado == 1) 
-                            {
-                                Console.Write("Filme Alugado \n");
-                                //filmes.Insert(3,);
-                                alugado++;
-                                continue;
-                            }
-                            }
-                            else if (resp == 2)
-                            {
+                        resp = int.Parse(Console.ReadLine());
+                        if (resp == 1)
+                        {
+                            Console.Write("Filme Alugado \n");
+                            on = true;
+                        }
+                        else if (resp == 2)
+                        {
 
-                            }
-                           
-                        
+                        }
                         break;
 
                     case 2:
@@ -130,13 +121,14 @@ namespace Locadora
                         Console.WriteLine("");
                         on = false;
                         break;
-                    
+
                     default:
                         Console.WriteLine("Digite a opção correspondente ao menu!");
                         break;
                 }
 
             } while (on == true);
+
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Locadora.src
         public string Idioma { get; set; }
         public string TipoReproducao { get; set; }
         public Categoria Categoria { get; set; }
+        public string Alugado { get; set; }
 
         public Filmes(string titulo,
             int classificacao, int duracao, string estudio, string idioma, string tipoReproducao, Categoria categoria)
@@ -26,6 +27,11 @@ namespace Locadora.src
             Idioma = idioma;
             TipoReproducao = tipoReproducao;
             Categoria = categoria;
+        }
+
+        public Filmes(string alugado)
+        {
+            Alugado = alugado;
         }
 
         public override string ToString()
